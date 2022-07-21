@@ -19,7 +19,7 @@
 <body class="bodyclass">
 
     <div class="topdiv">
-        <h1 style="margin-top: 20px; margin-bottom: 20px;">@ViewBag.Title</h1>
+        <h1 style="margin-top: 20px; margin-bottom: 20px; font-size: 40px;">@ViewBag.Title</h1>
     </div>
 
     <div class="bodydiv">
@@ -28,7 +28,7 @@
             @Html.AntiForgeryToken()
 
             <div class="form-horizontal">
-                <h3>@Model.Question</h3>
+                <h3 style="font-size: 22px;">@Model.Question</h3>
                 @Html.HiddenFor(m => m.locationId)
 
                 @if (ViewBag.GameOver != true)
