@@ -55,5 +55,27 @@ namespace WebAdventureGame.Controllers
 
             }
         }
+
+
+        public ActionResult Index1(string question, int? locationId)
+        {
+            GameDTO model = new GameDTO();
+
+
+            if (question == null)
+            {
+                var item1 = GameLogic.GameItems[0];
+                question = item1.question;
+                locationId = item1.id;
+            }
+            model.Question = question;
+            model.locationId = locationId;
+
+            if (GameLogic.GameItems.Where(x => x.parentId == locationId).Count() == 0)
+                ViewBag.GameOver = true;
+
+
+            return View(model);
+        }
     }
 }

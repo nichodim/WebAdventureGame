@@ -1,6 +1,19 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.bodyclass {
+    background-color: #2b2b2b;
+}
+
+.topdiv {
+    background-color: #1c1c1c;
+    padding: 30px;
+    color: white;
+    font-family: Mohave;
+}
+
+.bodydiv {
+    margin-left: 60px;
+    margin-right: 60px;
+    color: #adadad;
+    font-family: Lato;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,8 +40,4 @@ textarea {
 .navbar-inverse .navbar-toggle:focus {
     background-color: #777;
     border-color: #fff
-}
-
-.bodyclass {
-    background-color: darkseagreen; 
 }

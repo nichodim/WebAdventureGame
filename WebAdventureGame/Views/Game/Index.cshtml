@@ -1,50 +1,67 @@
 ﻿@model WebAdventureGame.Models.GameDTO
-
+@{
+    Layout = null;
+}
 @{
     ViewBag.Title = "Unn's Adventure";
 }
+<!DOCTYPE html>
 
-<div class="row">
-    <div class="col-lg-6">
-        <h2>@ViewBag.Title</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>AdventureGame</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bodyclass">
+
+    <div class="topdiv">
+        <h1 style="margin-top: 20px; margin-bottom: 20px;">@ViewBag.Title</h1>
     </div>
-</div>
 
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        <h4>@Model.Question</h4>
-        @Html.HiddenFor(m => m.locationId)
-
-        @if (ViewBag.GameOver != true)
+    <div class="bodydiv">
+        @using (Html.BeginForm())
         {
-            <div class="form-group">
-                @Html.LabelFor(model => model.Answer, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Answer, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Answer, "", new { @class = "text-danger" })
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h3>@Model.Question</h3>
+                @Html.HiddenFor(m => m.locationId)
+
+                @if (ViewBag.GameOver != true)
+                {
+                    <div class="form-group" style="margin-top: 20px; margin-bottom: 20px;">
+                        @Html.LabelFor(model => model.Answer, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Answer, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Answer, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                }
+
+                <div class="form-group" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div class="col-md-offset-2 col-md-10">
+                        @if (ViewBag.GameOver != true)
+                        {
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                        }
+                        <input type="submit" value="Reset" name="Reset" class="btn btn-danger" />
+                    </div>
                 </div>
             </div>
         }
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                @if (ViewBag.GameOver != true)
-                {
-                    <input type="submit" value="Submit" class="btn btn-primary" />
-                }
-                <input type="submit" value="Reset" name="Reset" class="btn btn-danger" />
-            </div>
-        </div>
     </div>
-}
 
 
 
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+    }
+</body>
+</html>
