@@ -35,7 +35,7 @@ namespace WebAdventureGame.helper
                     _GameItems.Add(new GameItem(10, "With confidence, Unn boldly knocks on the door. After a long wait, a short wizard answers the door. \"What? Don't you see I'm busy!?\" the wizard asks, with some deliberation, Unn responds, \"I am here to, umm, uhh-\" only to be interrupted by a furiously slammed door. Unn walks away defeated.", "knock", 3));
                     _GameItems.Add(new GameItem(11, "Unn sits down on the porch and thinks very heavily about what to do about this prediciment. With no answer, Unn walks away too let down to continue.", "x", 3));
 
-                    _GameItems.Add(new GameItem(12, "With overwhelming fear, Unn turns around and runs as far as he can from the cave. He runs and runs for longer than he can remember. Time loses all meaning to Unn as he bolts through distant lands never to be seen again.", "run", 6));
+                    _GameItems.Add(new GameItem(12, "Rethinking his boldness, Unn decides it would be better to play it safe as he runs from the cave. However, curiosity still lingers, \"What was that stomping?\" he thinks to himself.", "run", 6));
                     _GameItems.Add(new GameItem(13, "Unn stands his ground at the entrance ready to attack at a moments notice. Suddenly, a dragon emerges from the cave. Unn wonders how to react, should he attack or run?", "stand his ground", 6));
                     _GameItems.Add(new GameItem(14, "Feeling confused over what to do, Unn stands at the enterance. Suddenly, a dragon emerges from the cave. Unn wonders how to react, should he attack or run?", "x", 6));
 
@@ -47,7 +47,7 @@ namespace WebAdventureGame.helper
                     _GameItems.Add(new GameItem(19, "With rejuvenated vigor, Unn clobbers the dragon with extreme force blowing the beast back into the cave. Feeling accomplished with life, Unn walks triumphantly into the distance.", "attack", 13));
                     _GameItems.Add(new GameItem(20, "Suddenly overwhelmed with a sense of confusion, Unn does nothing only to be ignored by the giant dragon towering over him.", "x", 13));
 
-                    _GameItems.Add(new GameItem(21, "With overwhelming fear, Unn turns around and runs as far as he can from the cave. He runs and runs for longer than he can remember. Time loses all meaning to Unn as he bolts through distant lands never to be seen again.", "run", 14));
+                    _GameItems.Add(new GameItem(21, "With overwhelming fear of confusion, Unn turns around and runs as far as he can from the cave. He runs and runs for longer than he can remember. Time loses all meaning to Unn as he bolts through distant lands never to be seen again.", "run", 14));
                     _GameItems.Add(new GameItem(22, "Unn attempts to strike the beast with all his might. However, due to the confusion from earlier lingering in his mind, Unn holds back only for the dragon to slap him with such tremendous force that he flies into the sky never to be seen again.", "attack", 14));
                     _GameItems.Add(new GameItem(23, "Overwhelmed with even more confusion rattling his head, Unn loses control and dissapears into the darkness.", "x", 14));
 

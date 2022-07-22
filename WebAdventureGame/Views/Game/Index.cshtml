@@ -5,6 +5,12 @@
 @{
     ViewBag.Title = "Unn's Adventure";
 }
+@{
+    if (ViewBag.Counter == 16)
+    {
+        ViewBag.Color = "#00ff08";
+    }
+}
 <!DOCTYPE html>
 
 <html>
@@ -19,7 +25,9 @@
 <body class="bodyclass">
 
     <div class="topdiv">
-        <h1 style="margin-top: 20px; margin-bottom: 20px; font-size: 40px;">@ViewBag.Title</h1>
+                <h1 style="margin-top: 20px; margin-bottom: 20px; font-size: 40px;">@ViewBag.Title</h1>
+                <p style="margin-top: 20px; margin-bottom: 20px; color: @ViewBag.Color;">Endings: @ViewBag.Counter/16</p>
+        </div>
     </div>
 
     <div class="bodydiv">

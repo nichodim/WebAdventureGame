@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using WebAdventureGame.helper;
 using WebAdventureGame.Models;
@@ -10,6 +11,9 @@ namespace WebAdventureGame.Controllers
         // GET: Game
         public ActionResult Index(string question, int? locationId)
         {
+            if (Session["ResultIDs"] == null)
+                Session["ResultIDs"] = new List<int>();
+
             GameDTO model = new GameDTO();
 
             //if (question != null)
@@ -30,10 +34,13 @@ namespace WebAdventureGame.Controllers
             model.Question = question;
             model.locationId = locationId;
 
-            if (GameLogic.GameItems.Where(x => x.parentId == locationId).Count()==0)
+            if (GameLogic.GameItems.Where(x => x.parentId == locationId).Count() == 0)
+            {
                 ViewBag.GameOver = true;
-
-
+                if (((List<int>)Session["ResultIDs"]).Contains((int)locationId)==false)
+                        ((List<int>)Session["ResultIDs"]).Add((int)locationId);
+            }
+            ViewBag.Counter = ((List<int>)Session["ResultIDs"]).Count();
             return View(model);
         }
         [HttpPost]
