@@ -12,8 +12,29 @@
 .bodydiv {
     margin-left: 60px;
     margin-right: 60px;
-    color: #adadad;
+    color: #adadad !important;
     font-family: Helvetica;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.imagediv {
+    background-color: #1b264a;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.col-md-5 {
+    background-color: #1b264a;
+}
+
+.imageclass {
 }
 
 /* Set padding to keep content from hitting the edges */
